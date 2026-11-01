@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+}
+
+.font-tajawal {
+  font-family: 'Tajawal', sans-serif;
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Sound playing animation waves */
+@keyframes soundwave {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+.animate-wave-1 {
+  animation: soundwave 0.8s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: soundwave 0.8s ease-in-out 0.2s infinite;
+}
+.animate-wave-3 {
+  animation: soundwave 0.8s ease-in-out 0.4s infinite;
+}
+
+/* Minimum 48x48 touch targets for interactive accessibility */
+.touch-target {
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Poetry dual-column verse styling with ample spacing */
+.poetry-verse {
+  display: grid;
+  grid-template-columns: 1fr 48px 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .poetry-verse {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
